@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0b0f1a;
+  color: #e5e7eb;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* BACKGROUND */
+.bg-gradient {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, #1e3a8a, transparent 50%),
+    radial-gradient(circle at bottom right, #4f46e5, transparent 50%);
+  z-index: -1;
+}
+
+/* CONTAINER */
+.container {
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+/* AVATAR */
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 25px 60px rgba(0,0,0,.6);
+  margin-bottom: 1.2rem;
+}
+
+/* TEXT */
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: .3rem;
+}
+
+.subtitle {
+  color: #c7d2fe;
+  margin-bottom: 2rem;
+}
+
+/* LINKS */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* BUTTON */
+.link {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  padding: 1rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  transition: .35s ease;
+}
+
+/* ICON */
+.link i {
+  font-size: 1.5rem;
+}
+
+/* PLATFORM COLORS */
+.link.wa {
+  background: #22c55e;
+}
+
+.link.ig {
+  background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af);
+}
+
+.link.github {
+  background: #020617;
+  border: 1px solid #334155;
+}
+
+/* HOVER */
+.link:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+
+/* FOOTER */
+footer {
+  margin-top: 2.5rem;
+  font-size: .8rem;
+  color: #9ca3af;
+}
