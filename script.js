@@ -30,25 +30,24 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
   /* ===== CONTACT OVERLAY ===== */
-  const openContact = document.getElementById("openContact");
-  const closeContact = document.getElementById("closeContact");
-  const contactOverlay = document.getElementById("contactOverlay");
+const openContact = document.getElementById("openContact");
+const openContactBottom = document.getElementById("openContactBottom");
+const contactOverlay = document.getElementById("contactOverlay");
+const closeContact = document.getElementById("closeContact");
 
-  if (openContact && closeContact && contactOverlay) {
-    openContact.addEventListener("click", () => {
-      contactOverlay.classList.add("active");
-    });
+openContact.onclick = () => {
+  contactOverlay.classList.add("active");
+};
 
-    closeContact.addEventListener("click", () => {
-      contactOverlay.classList.remove("active");
-    });
+if (openContactBottom) {
+  openContactBottom.onclick = () => {
+    contactOverlay.classList.add("active");
+  };
+}
 
-    // klik area luar = close
-    contactOverlay.addEventListener("click", (e) => {
-      if (e.target === contactOverlay) {
-        contactOverlay.classList.remove("active");
-      }
-    });
-  }
+closeContact.onclick = () => {
+  contactOverlay.classList.remove("active");
+};
+
 
 });

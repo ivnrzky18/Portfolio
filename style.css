@@ -208,35 +208,53 @@ h1 span {
 /* PROJECTS */
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+@media (max-width: 900px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project-card {
   background: #020617;
-  border-radius: 1.4rem;
+  border-radius: 1.6rem;
   overflow: hidden;
-  transition: .4s ease;
+  transition: .35s ease;
 }
 
-.project-card:hover {
-  transform: translateY(-12px);
-}
-
-.project-card img {
+/* INI KUNCI UTAMA */
+.project-thumb {
   width: 100%;
-  display: block;
+  height: 250px;             
+  overflow: hidden;
 }
 
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;      
+  background: #020617;       
+}
+
+/* INFO */
 .project-info {
-  padding: 1.4rem;
+  padding: 1.8rem 2rem 2.2rem;
+}
+
+.project-info h3 {
+  margin: 0 0 .6rem;
+  font-size: 1.25rem;
 }
 
 .project-info p {
   color: #cbd5f5;
-  font-size: .9rem;
+  font-size: .95rem;
   line-height: 1.6;
 }
+
 
 /* FOOTER */
 footer {
@@ -330,3 +348,132 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+.cta-section {
+  text-align: center;
+}
+
+.cta-section h2 {
+  margin-bottom: .6rem;
+}
+
+.cta-section p {
+  max-width: 520px;
+  margin: 0 auto 1.6rem;
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
+.cta-btn {
+  background: linear-gradient(45deg, #6366f1, #818cf8);
+  color: #020617;
+  border: none;
+  padding: .9rem 2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.divider {
+  margin: 1.4rem 0;
+  font-size: .8rem;
+  color: #94a3b8;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background: #334155;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.contact-note {
+  font-size: .85rem;
+  color: #cbd5f5;
+  line-height: 1.6;
+  margin: .8rem 0 1.2rem;
+}
+
+.contact-icons .mail {
+  background: linear-gradient(45deg,#0ea5e9,#38bdf8);
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  text-align: center;
+}
+
+.contact-desc {
+  max-width: 520px;
+  margin: 0 auto 2rem;
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
+/* FORM */
+.contact-form {
+  max-width: 520px;
+  margin: auto;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(255,255,255,.07);
+  border: 1px solid #334155;
+  border-radius: 1rem;
+  padding: .9rem 1.1rem;
+  color: #e5e7eb;
+  font-size: .95rem;
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #94a3b8;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #818cf8;
+  background: rgba(255,255,255,.1);
+}
+
+/* BUTTON */
+.contact-form button {
+  background: linear-gradient(45deg, #6366f1, #818cf8);
+  border: none;
+  padding: .9rem;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #020617;
+  transition: .3s ease;
+}
+
+.contact-form button:hover {
+  transform: scale(1.04);
+  filter: brightness(1.1);
+}
+
