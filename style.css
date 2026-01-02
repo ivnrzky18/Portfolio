@@ -1,3 +1,4 @@
+/* RESET & BASE */
 * {
   box-sizing: border-box;
   font-family: "Space Grotesk", sans-serif;
@@ -8,6 +9,12 @@ body {
   background: #0b0f1a;
   color: #e5e7eb;
   overflow-x: hidden;
+}
+
+/* HILANGKAN GARIS LINK (FIX GITHUB LINE) */
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* BACKGROUND */
@@ -42,7 +49,7 @@ body {
   color: #e5e7eb;
   border: none;
   cursor: pointer;
-  transition: .3s;
+  transition: .3s ease;
 }
 
 .top-avatar {
@@ -63,7 +70,7 @@ body {
 .top-icon:hover,
 .top-avatar:hover {
   background: #6366f1;
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 /* HERO */
@@ -96,6 +103,7 @@ body {
   box-shadow: 0 30px 70px rgba(0,0,0,.6);
 }
 
+/* TEXT */
 h1 {
   font-size: 2.7rem;
   margin: 0;
@@ -144,7 +152,7 @@ h1 span {
   background: rgba(255,255,255,.07);
   border-radius: 1.4rem;
   padding: 2rem;
-  transition: .35s;
+  transition: .35s ease;
 }
 
 .info-card:hover {
@@ -180,7 +188,7 @@ h1 span {
   border-radius: 1.3rem;
   padding: 1.6rem 1rem;
   text-align: center;
-  transition: .35s;
+  transition: .35s ease;
 }
 
 .skill-card:hover {
@@ -208,7 +216,7 @@ h1 span {
   background: #020617;
   border-radius: 1.4rem;
   overflow: hidden;
-  transition: .4s;
+  transition: .4s ease;
 }
 
 .project-card:hover {
@@ -238,7 +246,7 @@ footer {
   color: #9ca3af;
 }
 
-/* OVERLAY */
+/* CONTACT OVERLAY */
 .contact-overlay {
   position: fixed;
   inset: 0;
@@ -249,7 +257,7 @@ footer {
   justify-content: center;
   opacity: 0;
   pointer-events: none;
-  transition: .4s;
+  transition: .4s ease;
   z-index: 200;
 }
 
@@ -281,9 +289,11 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.6rem;
-  color: white;
-  transition: .3s;
+  transition: .3s ease;
+}
+
+.contact-icons a:hover {
+  transform: scale(1.12);
 }
 
 .contact-icons .ig {
@@ -294,6 +304,12 @@ footer {
   background: #22c55e;
 }
 
+.contact-icons img {
+  width: 26px;
+  height: 26px;
+}
+
+/* CLOSE BUTTON */
 .close-btn {
   background: transparent;
   border: 1px solid #334155;
@@ -313,33 +329,4 @@ footer {
 .reveal.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-.contact-icons img {
-  width: 26px;
-  height: 26px;
-}
-
-.project-desc {
-  color: #d1d5db;
-  line-height: 1.6;
-  margin-bottom: .8rem;
-}
-
-.project-list {
-  padding-left: 1.2rem;
-  margin: .8rem 0 1rem;
-  color: #cbd5f5;
-  font-size: .9rem;
-}
-
-.project-list li {
-  margin-bottom: .4rem;
-}
-
-.project-tech,
-.project-role {
-  font-size: .85rem;
-  color: #a5b4fc;
-  margin-top: .4rem;
 }
