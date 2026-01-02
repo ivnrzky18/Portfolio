@@ -209,18 +209,20 @@
     Hubungi saya di bawah ini.
   </p>
 
-  <form class="contact-form"
-        action="ivanrizky1811@gmail.com"
-        method="POST"
-        enctype="text/plain">
+<form name="contact"
+      method="POST"
+      data-netlify="true"
+      class="contact-form">
 
+  <input type="hidden" name="form-name" value="contact">
 
-    <input type="email" name="email" placeholder="Your Email" required>
+  
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
 
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
 
-    <button type="submit">Send Message</button>
-  </form>
 </section>
 
 
