@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const greeting = document.getElementById("greeting");
   if (greeting) {
     const hour = new Date().getHours();
-    let text = "Halo 👋 ";
+    let text = "Hai, ";
 
-    if (hour < 11) text += "Selamat Pagi";
-    else if (hour < 15) text += "Selamat Siang";
-    else if (hour < 18) text += "Selamat Sore";
-    else text += "Selamat Malam";
+    if (hour < 11) text += "Selamat Pagi 👋";
+    else if (hour < 15) text += "Selamat Siang 👋";
+    else if (hour < 18) text += "Selamat Sore 👋";
+    else text += "Selamat Malam 👋";
 
     greeting.textContent = text;
   }
